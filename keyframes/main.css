@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: #f7f9f9;
+    color: #575a5b;
+    font-size: 16px;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    line-height: 1.5;
+}
+
+
+.base{
+    width:200px;
+    height:100px;
+    background:darkslategray;
+}
+
+
+.left-arm{
+    animation: swing 2s 0s infinite ease;
+    display: block;
+    width:300px;
+    height:100px;
+    background:darkred;
+}
+
+.to-tc{
+    transform-origin: top center;
+}
+
+.right-arm{
+    animation: swing 2s infinite;
+    display: block;
+    width:300px;
+    height:100px;
+    background:darkslategray;
+}
+
+
+.boxSwing{
+    animation: swingMultiStep 2s infinite;
+}
+
+.foot{
+    animation: tap 1s infinite;
+}
+
+
+@keyframes swing{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes swingMultiStep{
+    0%, 50%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }    
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes tap{
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/*Equivalent to this longhand way...
+@keyframes swingMultiStep{
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+*/

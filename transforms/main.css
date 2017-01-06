@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: #f7f9f9;
+    color: #575a5b;
+    font-size: 16px;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    line-height: 1.5;
+}
+
+.modal-close{
+    right:15px;
+    top:0;
+    position: absolute;
+    display: block;
+    transition: transform 2s ease-out;
+}
+.modal-close:hover{
+    transform: rotate(360deg);
+    /*transform: rotate(1turn) is the same as 360deg*/
+}
+
+
+
+input{
+    position: absolute;
+    width: 90%;
+    height: 40px;
+    padding: 0 1em;
+    background: #EEE;
+    font-size: 100%;
+}
+label{
+    font-size: 90%;
+    line-height: 3em;
+    display: block;
+}
+
+input + label{
+    position: relative;
+    padding: 0 1em;
+    color: #6a7989;
+    transform-origin: left center;
+    -webkit-transform-origin: left center;
+    transition: all 0.3s;
+}
+
+input:focus + label{
+    color:#333;
+    transform: translateY(-40px) scale(0.8);
+}
