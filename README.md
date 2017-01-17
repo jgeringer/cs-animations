@@ -40,3 +40,9 @@ Target the animation...
 #element{
     animation: <name-animation> <duration> <delay> <iteration> <timing-function-ease>;
 }
+
+ forwards: makes it so that it animates to and stops at the final step in the animation.
+
+##cubic bezier
+cubic-bezier(0.17, 0.89, 0.32, 1.25)
+(Xpos-start-start, Ypos-start-end, Xpos-end-start, Ypos-end-end)
